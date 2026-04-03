@@ -1,0 +1,348 @@
+/*
+    FILE: styles.css
+    PROJECT: Mood Cafe and Lounge Bar - External Stylesheet
+    AUTHOR: Hand-coded from scratch using plain text editor (Notepad++)
+    DATE: 2026
+
+   
+/* 1. Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: #1a0a00;
+  background-image: url('background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Links */
+a {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #7a3b1e;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #c05c2a;
+  text-decoration: none;
+}
+
+/* Header */
+#header {
+  background-color: rgba(43, 26, 14, 0.9);
+  color: #fdf6ec;
+  padding: 20px 36px;
+  border-bottom: 4px solid #8b6f47;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+#header h1 {
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #f5c98a;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#header .tagline {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  color: #e8d4b0;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+#header .address {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #b89a75;
+  letter-spacing: 0.5px;
+}
+
+/* Two-Column Layout Wrapper */
+#wrapper {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* LEFT COLUMN — Navigation Menu */
+#nav {
+  background-color: rgba(61, 43, 31, 0.9);
+  width: 250px;
+  min-width: 250px;
+  padding: 28px 16px;
+  border-right: 3px solid #8b6f47;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  height: fit-content;
+}
+
+#nav h2 {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #f5c98a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #8b6f47;
+}
+
+#nav h3 {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #8b6f47;
+  margin-bottom: 8px;
+  margin-top: 4px;
+}
+
+#nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+#nav ul li {
+  margin-bottom: 3px;
+}
+
+#nav ul li a {
+  display: block;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #e8d4b0;
+  text-decoration: none;
+  padding: 9px 12px;
+  border-radius: 3px;
+  border-left: 3px solid transparent;
+  letter-spacing: 0.5px;
+}
+
+#nav ul li a:hover {
+  background-color: rgba(43, 26, 14, 0.8);
+  color: #f5c98a;
+  border-left-color: #8b6f47;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Hours & Contact blocks in nav */
+.nav-hours,
+.nav-contact {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #5a3d2b;
+}
+
+.nav-hours p,
+.nav-contact p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #b89a75;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.nav-contact a {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  color: #c05c2a;
+  text-decoration: underline;
+}
+
+.nav-contact a:hover {
+  color: #f5c98a;
+}
+
+/* RIGHT COLUMN — Main Content */
+#content {
+  background-color: rgba(253, 240, 220, 0.95);
+  flex: 1;
+  padding: 30px 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CONTENT SECTIONS */
+.section {
+  display: none;
+  margin-bottom: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #e0c9a0;
+}
+
+.section:first-child {
+  display: block;
+}
+
+.section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.section h2 {
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2b1a0e;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #8b6f47;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section h3 {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #5a3d2b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-left: 8px;
+  border-left: 3px solid #8b6f47;
+}
+
+.section p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  color: #1a0a00;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.section ul {
+  margin: 6px 0 12px 28px;
+}
+
+.section ul li {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  color: #1a0a00;
+  line-height: 1.9;
+  margin-bottom: 5px;
+}
+
+.section em {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #7a3b1e;
+  font-weight: bold;
+}
+
+.section strong {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #2b1a0e;
+}
+
+/* IMAGES & CAPTIONS */
+.content-img {
+  display: block;
+  max-width: 100%;
+  width: 560px;
+  height: auto;
+  margin-top: 20px;
+  border: 2px solid #8b6f47;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.content-img:hover {
+  transform: scale(1.02);
+}
+
+.caption {
+  font-family: Georgia, serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #5a3d2b;
+  margin-top: 6px;
+  margin-bottom: 0;
+}
+
+/* HIGHLIGHT / PROMO BOX */
+.highlight-box {
+  margin-top: 20px;
+  padding: 14px 18px;
+  background-color: rgba(245, 230, 200, 0.9);
+  border-left: 4px solid #8b6f47;
+  border-radius: 5px;
+  backdrop-filter: blur(3px);
+}
+
+.highlight-box p {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 13px;
+  color: #2b1a0e;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* FOOTER */
+#footer {
+  background-color: rgba(43, 26, 14, 0.9);
+  color: #b89a75;
+  padding: 20px 36px;
+  border-top: 4px solid #8b6f47;
+  text-align: center;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 11px;
+  line-height: 2;
+  backdrop-filter: blur(5px);
+}
+
+#footer a {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #f5c98a;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#footer a:hover {
+  color: #c05c2a;
+  text-decoration: none;
+}
+
+#footer .footer-tagline {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  color: #c05c2a;
+  margin-top: 4px;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+}
