@@ -1,7 +1,7 @@
 <!--
-    FILE: Exercise2.html
-    PROJECT: Mood Cafe and Lounge Bar - Website
-    AUTHOR: Hand-coded from scratch using plain text editor (Notepad++)
+    FILE: index.html
+    PROJECT: Mood Cafe and Lounge Bar - Homepage Replica
+    AUTHOR: Hand-coded and adapted to match the provided reference
     DATE: 2026
 -->
 <!DOCTYPE html>
@@ -9,93 +9,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mood Cafe and Lounge Bar</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Mood Cafe &amp; Lounge Bar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <div id="header">
-        <h1>Mood Cafe &amp; Lounge Bar</h1>
-        <p>Where Every Mood Finds Its Vibe</p>
-    </div>
+    <!-- Main Page Wrapper -->
+    <div class="page-shell">
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+        <!-- Top Navigation Bar -->
+        <header class="topbar">
+            <a class="brand" href="#">Mood Cafe &amp; Lounge Bar</a>
 
-        <!-- Left Column: Navigation -->
-        <div id="nav">
-            <ul>
-                <li><a href="#" onclick="showSection('home')">Home</a></li>
-                <li><a href="#" onclick="showSection('menu')">Menu</a></li>
-                <li><a href="#" onclick="showSection('live music')">Music</a></li>
-                <li><a href="#" onclick="showSection('jobs')">Jobs</a></li>
-            </ul>
+            <nav class="main-nav" aria-label="Primary">
+                <div class="nav-links">
+                    <a class="nav-link active" href="#" onclick="showSection('home'); return false;">Home</a>
+                    <a class="nav-link" href="#" onclick="showSection('menu'); return false;">Menu</a>
+                    <a class="nav-link" href="#" onclick="showSection('music'); return false;">Music</a>
+                    <a class="nav-link" href="#" onclick="showSection('jobs'); return false;">Jobs</a>
+                </div>
+                <a class="reserve-btn" href="#">Reserve a Table</a>
+            </nav>
+        </header>
 
-            <div class="nav-hours">
-               <h3>Hours</h3>
-                <p>Mon &ndash; Thu<br>10:00 AM &ndash; 12:00 AM</p>
-                <p>Fri &ndash; Sun<br>10:00 AM &ndash; 2:00 AM</p>
-            </div>
+        <!-- Two-Column Hero Layout -->
+        <main id="home" class="page-section hero-layout">
 
-            <div class="nav-contact">
-                <h3>Find Us</h3>
-                <p>Bonifacio St.<br>Pob. Uno<br>Infanta, Quezon</p>
-                <p><a href="mailto:hello@moodcafe.ph">hello@moodcafe.ph</a></p>
-            </div>
-        </div>
+            <!-- Left Panel: Image Area and Quick Info -->
+            <section class="hero-visual" aria-label="Cafe interior and quick details">
+                <div class="hero-overlay">
+                    <img class="wall-logo" src="logo.png" alt="Mood logo">
 
-        <!-- Right Column: Main Content -->
-        <div id="content">
+                    <!-- Features / Selling Points -->
+                    <div class="info-card">
+                        <ul>
+                            <li>Handcrafted specialty drinks and cocktails</li>
+                            <li>Delicious food prepared fresh daily</li>
+                            <li>Live music and DJ nights every weekend</li>
+                            <li>Comfortable and stylish lounge seating</li>
+                            <li>Private event bookings available</li>
+                        </ul>
+                    </div>
 
-            <!-- Home Section -->
-            <div id="home" class="section">
-                <h2>Welcome to Mood Cafe &amp; Lounge Bar</h2>
-                <p>
-                    Nestled along Bonifacio Street in Infanta, Quezon, <strong>Mood Cafe and Lounge Bar</strong>
-                    is where your day begins with a perfectly brewed cup of coffee and ends with
-                    hand-crafted cocktails in a warm, intimate setting. We are more than just a
-                    place to eat and drink &mdash; we are a space to unwind, connect, and simply be. 
-                </p>
-                <p>
-                    Whether you are catching up with friends over an afternoon latte, settling in
-                    for a solo work session, or winding down the evening with a signature cocktail
-                    and live music, Mood has a seat with your name on it.
-                </p>
+                    <!-- Opening Hours -->
+                    <section class="hours-block" aria-label="Opening hours">
+                        <h2>Hours</h2>
+                        <p>Mon &ndash; Thu</p>
+                        <p>10:00 AM - 12:00 AM</p>
+                        <p>Fri &ndash; Sun</p>
+                        <p>10:00 AM - 2:00 AM</p>
+                    </section>
 
-                 <img
-                    src="meals.jpg"
-                    alt="Mood Cafe and Lounge Bar interior"
-                    class="content-img">
-                    <p class="caption">Our cozy interior &mdash; warm lights, great vibes, always welcoming.</p>
+                    <!-- Bottom Contact Information -->
+                    <div class="contact-strip">
+                        <section>
+                            <h2>Location</h2>
+                            <p>Bonifacio St. Pob. Uno,</p>
+                            <p>Infanta, Quezon, Philippines</p>
+                        </section>
 
-                    <div class="highlight-box">
-                    <p>&#10024; <strong>Weekend Special:</strong> Buy any 2 signature drinks and get a free dessert of the day. Valid Friday &ndash; Sunday while stocks last.</p>
+                        <section>
+                            <h2>Contact</h2>
+                            <p><a href="mailto:info@moodcafe.com">info@moodcafe.com</a></p>
+                            <p><a href="tel:+63912345678">+63 912 345 678</a></p>
+                        </section>
+
+                        <section>
+                            <h2>Connect</h2>
+                            <p><a href="https://www.facebook.com/profile.php?id=61575905944306" target="_blank" rel="noreferrer">Facebook <span aria-hidden="true">f</span></a></p>
+                            <p><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">&#9673;</span></a></p>
+                        </section>
                     </div>
                 </div>
+            </section>
 
-                <ul>
-                    <li>Handcrafted specialty drinks and cocktails</li>
-                    <li>Delicious food prepared fresh daily</li>
-                    <li>Live music and DJ nights every weekend</li>
-                    <li>Comfortable and stylish lounge seating</li>
-                    <li>Private event bookings available</li>
-                </ul>
+            <!-- Right Panel: Intro Text and Highlight Cards -->
+            <section class="hero-copy" aria-label="Cafe introduction">
+                <div class="copy-inner">
 
-                <h3>Opening Hours</h3>
-                <ul>
-                    <li>Monday - Thursday: 10:00 AM - 11:00 PM</li>
-                    <li>Friday - Saturday: 10:00 AM - 2:00 AM</li>
-                    <li>Sunday: 12:00 PM - 10:00 PM</li>
-                </ul>
-            </div>
+                    <!-- Main Wordmark -->
+                    <img class="wordmark-image" src="logo.png" alt="Mood">
 
-            <!-- Menu Section -->
-            <div id="menu" class="section">
+                    <!-- Tagline -->
+                    <p class="tagline">Coffee by Day &bull; Cocktails by Night &bull; Always in the Mood</p>
+
+                    <!-- Introductory Description -->
+                    <p class="lead">
+                        Nestled along Bonifacio Street in Infanta, Quezon, Mood Cafe and Lounge Bar is where your day begins with a perfectly brewed cup of coffee and ends with hand-crafted cocktails in a warm, intimate setting. We are more than just a place to eat and drink &mdash; we are a space to unwind, connect, and simply be.
+                    </p>
+
+                    <!-- Promo / Special Offer -->
+                    <p class="special">
+                        <span class="special-mark">&#10022;</span>
+                        <span class="special-label">Weekend Special:</span>
+                        Buy any 2 signature drinks and get a free dessert of the day. Valid Friday &ndash; Sunday while stocks last.
+                    </p>
+                </div>
+
+                <!-- Featured Category Cards -->
+                <div class="feature-cards" aria-label="Highlights">
+                    <article class="feature-card">
+                        <img src="coffee.jpg" alt="Cup of coffee">
+                        <h2>coffee</h2>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="cocktail.jpg" alt="Cocktail drink">
+                        <h2>cocktail</h2>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="meals.jpg" alt="Meals served at Mood Cafe">
+                        <h2>meals</h2>
+                    </article>
+
+                    <article class="feature-card">
+                        <img src="events.jpg" alt="Mood Cafe event setup">
+                        <h2>events</h2>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Menu Section -->
+        <section id="menu" class="page-section content-section">
+            <div class="section-panel">
                 <h2>Food &amp; Drinks</h2>
-                <p>From morning espresso to midnight cocktails, our menu is crafted to match every mood.</p>
+                <p>
+                    From morning espresso to midnight cocktails, our menu is crafted to match every mood.
+                </p>
 
-                <h3>&#9749; Coffee &amp; Cafe Drinks</h3>
+                <h3>Coffee &amp; Cafe Drinks</h3>
                 <ul>
                     <li>Signature Cold Brew &mdash; <em>&#8369;120</em></li>
                     <li>Caramel Macchiato &mdash; <em>&#8369;135</em></li>
@@ -105,154 +149,117 @@
                     <li>Mood Special Blend Drip Coffee &mdash; <em>&#8369;95</em></li>
                 </ul>
 
-                <h3>&#127828; All-Day Bites</h3>
+                <h3>All-Day Bites</h3>
                 <ul>
                     <li>Truffle Parmesan Fries &mdash; <em>&#8369;160</em></li>
                     <li>Cheese Garlic Bread with dip &mdash; <em>&#8369;120</em></li>
                     <li>Chicken Pesto Pasta &mdash; <em>&#8369;220</em></li>
                     <li>Clubhouse Sandwich with chips &mdash; <em>&#8369;195</em></li>
                     <li>Smoked Salmon Bagel &mdash; <em>&#8369;240</em></li>
-                    <li>Overnight Oats Bowl (seasonal toppings) &mdash; <em>&#8369;155</em></li>
+                    <li>Overnight Oats Bowl &mdash; <em>&#8369;155</em></li>
                 </ul>
 
-                <h3>&#127864; Cocktails &amp; Lounge Drinks</h3>
+                <h3>Cocktails &amp; Lounge Drinks</h3>
                 <ul>
                     <li>Mood Negroni &mdash; <em>&#8369;280</em></li>
                     <li>Espresso Martini &mdash; <em>&#8369;295</em></li>
                     <li>Passionfruit Mojito &mdash; <em>&#8369;260</em></li>
                     <li>Dark &amp; Stormy &mdash; <em>&#8369;270</em></li>
-                    <li>House Sangria (glass) &mdash; <em>&#8369;220</em></li>
-                    <li>Craft Beer Selection (ask your server) &mdash; <em>&#8369;150+</em></li>
+                    <li>House Sangria &mdash; <em>&#8369;220</em></li>
+                    <li>Craft Beer Selection &mdash; <em>&#8369;150+</em></li>
                 </ul>
-
-                <h3>&#127856; Desserts</h3>
-                <ul>
-                    <li>Burnt Basque Cheesecake &mdash; <em>&#8369;180</em></li>
-                    <li>Belgian Waffle with berries &amp; cream &mdash; <em>&#8369;165</em></li>
-                    <li>Chocolate Lava Cake &mdash; <em>&#8369;195</em></li>
-                    <li>Mango Panna Cotta &mdash; <em>&#8369;160</em></li>
-                </ul>
-
-                <img
-                    src="cocktail.jpg"
-                    alt="Signature drinks at Mood Cafe"
-                    class="content-img">
-                <p class="caption">A selection of our hand-crafted coffee drinks and cocktails.</p>
             </div>
+        </section>
 
-           <!-- Live Music Section -->
-            <div id="music" class="section">
+        <!-- Music Section -->
+        <section id="music" class="page-section content-section">
+            <div class="section-panel">
                 <h2>Live Music &amp; Events</h2>
                 <p>
-                    As the sun sets, Mood transforms. Our lounge comes alive with curated sounds
-                    and live performances from talented local and regional artists. Good music,
-                    great drinks &mdash; the perfect combination.
+                    As the sun sets, Mood transforms. Our lounge comes alive with curated sounds and live performances from talented local and regional artists.
                 </p>
 
-                <h3>&#127928; Weekly Programme</h3>
+                <h3>Weekly Programme</h3>
                 <ul>
-                    <li><strong>Monday &amp; Tuesday</strong> &mdash; Acoustic Chill Playlist (ambient background)</li>
-                    <li><strong>Wednesday</strong> &mdash; Open Mic Night &mdash; 7:00 PM &ndash; 10:00 PM</li>
-                    <li><strong>Thursday</strong> &mdash; Jazz &amp; Soul Session &mdash; 8:00 PM &ndash; 11:00 PM</li>
-                    <li><strong>Friday</strong> &mdash; Live Band Night &mdash; 9:00 PM &ndash; 1:00 AM</li>
-                    <li><strong>Saturday</strong> &mdash; DJ Set &amp; Dance Night &mdash; 9:00 PM &ndash; 2:00 AM</li>
-                    <li><strong>Sunday</strong> &mdash; Acoustic Brunch &mdash; 11:00 AM &ndash; 2:00 PM</li>
+                    <li>Monday &amp; Tuesday &mdash; Acoustic Chill Playlist</li>
+                    <li>Wednesday &mdash; Open Mic Night, 7:00 PM - 10:00 PM</li>
+                    <li>Thursday &mdash; Jazz &amp; Soul Session, 8:00 PM - 11:00 PM</li>
+                    <li>Friday &mdash; Live Band Night, 9:00 PM - 1:00 AM</li>
+                    <li>Saturday &mdash; DJ Set &amp; Dance Night, 9:00 PM - 2:00 AM</li>
+                    <li>Sunday &mdash; Acoustic Brunch, 11:00 AM - 2:00 PM</li>
                 </ul>
 
                 <p>
-                    Are you a musician or band interested in performing at Mood? We love supporting
-                    local talent. Send your profile, genre, and a sample recording to
-                    <a href="mailto:music@moodcafe.ph">music@moodcafe.ph</a> and our events
-                    coordinator will be in touch within one week.
+                    Are you a musician or band interested in performing at Mood? Send your profile and sample recording to
+                    <a href="mailto:music@moodcafe.ph">music@moodcafe.ph</a>.
                 </p>
-
-                <img
-                    src="events.jpg"
-                    alt="Live music night at Mood Lounge Bar"
-                    class="content-img">
-                <p class="caption">Wednesday Open Mic Night &mdash; one of our most popular weekly events.</p>
-
-                <div class="highlight-box">
-                    <p>&#127881; <strong>Upcoming Event:</strong> Mood Anniversary Night &mdash; Live performances, drink specials, and surprise guests. Watch our socials for the date announcement.</p>
-                </div>
             </div>
-         
-            <!--Jobs Section-->
-            <div id="jobs" class="section">
+        </section>
+
+        <!-- Jobs Section -->
+        <section id="jobs" class="page-section content-section">
+            <div class="section-panel">
                 <h2>Join the Mood Team</h2>
                 <p>
-                    We are a small but passionate team dedicated to creating memorable experiences
-                    for every guest who walks through our doors. If you love people, thrive in a
-                    creative environment, and want to be part of something special in Infanta,
-                    we would love to hear from you.
+                    We are a small but passionate team dedicated to creating memorable experiences for every guest who walks through our doors.
                 </p>
 
-                <h3>&#128204; Current Openings</h3>
+                <h3>Current Openings</h3>
                 <ul>
-                <li>
-                    <strong>Barista / Cafe Staff</strong> &mdash; Part-time &amp; Full-time<br>
-                    Experience with espresso machines preferred; training provided for the right candidate.
-                </li>
-                <li>
-                    <strong>Bartender / Mixologist</strong> &mdash; Full-time (evenings &amp; weekends)<br>
-                    Knowledge of classic and craft cocktails required. Creative flair is a big plus.
-                </li>
-                <li>
-                    <strong>Waiter / Service Crew</strong> &mdash; Part-time &amp; Full-time<br>
-                    Friendly, reliable, and passionate about hospitality. No experience required &mdash; we train.
-                </li>
-                <li>
-                    <strong>Social Media &amp; Content Creator</strong> &mdash; Flexible / Project-based<br>
-                    Strong photography or video editing skills. Knowledge of Instagram and Facebook marketing.
-                </li>
-                <li>
-                    <strong>Events Coordinator</strong> &mdash; Part-time<br>
-                    Help us plan and execute live music nights, private events, and special promotions.
-                </li>
+                    <li>Barista / Cafe Staff &mdash; Part-time &amp; Full-time</li>
+                    <li>Bartender / Mixologist &mdash; Full-time</li>
+                    <li>Waiter / Service Crew &mdash; Part-time &amp; Full-time</li>
+                    <li>Social Media &amp; Content Creator &mdash; Flexible / Project-based</li>
+                    <li>Events Coordinator &mdash; Part-time</li>
                 </ul>
 
-                <h3>&#128140; How to Apply</h3>
+                <h3>How to Apply</h3>
                 <p>
-                    Send your resume and a short introduction about yourself to
+                    Send your resume and a short introduction to
                     <a href="mailto:careers@moodcafe.ph">careers@moodcafe.ph</a>.
-                    Use the job title as your email subject. Walk-in applications are also welcome
-                    during cafe hours &mdash; just ask for the manager and bring a printed copy of your resume.
-                </p>
-                <p>
-                    We review all applications on a rolling basis. Shortlisted applicants will be
-                    contacted within two weeks for an informal interview over coffee &mdash; on us!
+                    Walk-in applications are also welcome during cafe hours.
                 </p>
             </div>
+        </section>
 
-            </div><!-- end #content -->
-
-        </div><!-- end #wrapper -->
-
-    <!-- Footer Section -->
-    <div id="footer">
-        <p>&copy; 2026 Mood Cafe &amp; Lounge Bar. All Rights Reserved.</p>
-        <p>
-            Bonifacio St. Pob. Uno, Infanta, Quezon, Philippines |
-            <a href="mailto:info@moodcafe.com">info@moodcafe.com</a> |
-            <a href="tel:+63912345678">+63 912 345 678</a> |
-            <a href="https://www.facebook.com/profile.php?id=61575905944306" target="_blank">Facebook</a>
-        </p>
-        <p class="footer-tagline">&#9749; Coffee by Day &nbsp;&bull;&nbsp; &#127864; Cocktails by Night &nbsp;&bull;&nbsp; Always in the Mood</p>
+        <!-- Footer -->
+        <footer class="site-footer">
+            <p>&copy; 2026 Mood Cafe &amp; Lounge Bar. All Rights Reserved.</p>
+            <p>
+                Bonifacio St. Pob. Uno, Infanta, Quezon, Philippines |
+                <a href="mailto:info@moodcafe.com">info@moodcafe.com</a> |
+                <a href="tel:+63912345678">+63 912 345 678</a> |
+                <a href="https://www.facebook.com/profile.php?id=61575905944306" target="_blank" rel="noreferrer">Facebook</a>
+            </p>
+            <span class="footer-spark" aria-hidden="true">&#10022;</span>
+        </footer>
     </div>
 
-    <!-- JavaScript for navigation -->
+    <!-- JavaScript for Navigation -->
     <script>
         function showSection(id) {
-            /* Get all section divs on the page */
-            var sections = document.querySelectorAll('.section');
+            var sections = document.querySelectorAll('.page-section');
+            var links = document.querySelectorAll('.nav-link');
 
-            /* Loop through and hide every section */
             for (var i = 0; i < sections.length; i++) {
                 sections[i].style.display = 'none';
             }
 
-            /* Show only the section that matches the clicked nav link */
-            document.getElementById(id).style.display = 'block';
+            for (var j = 0; j < links.length; j++) {
+                links[j].className = links[j].className.replace(' active', '');
+            }
+
+            document.getElementById(id).style.display = 'grid';
+
+            if (id !== 'home') {
+                document.getElementById(id).style.display = 'block';
+            }
+
+            for (var k = 0; k < links.length; k++) {
+                if (links[k].getAttribute('onclick').indexOf("'" + id + "'") !== -1) {
+                    links[k].className += ' active';
+                }
+            }
         }
     </script>
 
