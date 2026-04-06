@@ -1,3 +1,4 @@
+
 /*
     FILE: style.css
     PROJECT: Mood Cafe and Lounge Bar - Homepage Replica Stylesheet
@@ -59,7 +60,7 @@ img {
     gap: 28px;
     min-height: 79px;
     padding: 14px 22px 15px 34px;
-    background: linear-gradient(180deg, rgba(20, 14, 10, 0.34), rgba(20, 14, 10, 0.08));
+    background: linear-gradient(180deg, #593528 0%, #4b2a1f 100%);
     color: #f6efe8;
     position: absolute;
     top: 0;
@@ -430,6 +431,9 @@ img {
 .content-section {
     display: none;
     padding: 34px 28px;
+    background:
+        linear-gradient(180deg, rgba(31, 20, 15, 0.48), rgba(31, 20, 15, 0.48)),
+        url("widebackground.png") center center / cover no-repeat;
 }
 
 .section-panel {
