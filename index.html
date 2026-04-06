@@ -240,21 +240,34 @@
 
         <!-- Music Section -->
         <section id="music" class="page-section content-section">
-            <div class="section-panel music-panel">
-                <h2>Live Music &amp; Events</h2>
-                <p>
-                    As the sun sets, Mood transforms. Our lounge comes alive with curated sounds and live performances from talented local and regional artists.
-                </p>
+<div class="section-panel music-panel">
+                <div class="menu-hero">
+                    <div class="menu-hero-copy">
+                        <p class="menu-eyebrow">Live every night</p>
+                        <h2>Live Music &amp; Events</h2>
+                        <p class="menu-intro">
+                            As the sun sets, Mood transforms. Our lounge comes alive with curated sounds and live performances from talented local and regional artists.
+                        </p>
+                        <div class="menu-tags" aria-label="Music and event features">
+                            <span>Games</span>
+                            <span>Happy Holidays</span>
+                            <span>Big Groups</span>
+                            <span>Arts</span>
+                            <span>Celebrations</span>
+                        </div>
+                    </div>
 
-                <div class="menu-tags" aria-label="Music and event features">
-                    <span>Games</span>
-                    <span>Happy Holidays</span>
-                    <span>Big Groups</span>
-                    <span>Arts</span>
-                    <span>Celebrations</span>
+                    <div class="menu-highlight-card" aria-label="Music quick highlights">
+                        <p class="menu-highlight-label">Live Favorites</p>
+                        <ul class="menu-highlight-list">
+                            <li>Live bands Fri/Sat nights</li>
+                            <li>Open Mic Wednesdays</li>
+                            <li>Weekend DJ sets</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="menu-gallery music-gallery" aria-label="Music and events gallery">
+                <div class="menu-gallery" aria-label="Music and events gallery">
                     <figure class="menu-gallery-card">
                         <img src="games.jpg" alt="Guests enjoying games at Mood Cafe">
                         <figcaption>
@@ -315,18 +328,31 @@
 
         <!-- Jobs Section -->
         <section id="jobs" class="page-section content-section">
-            <div class="section-panel jobs-panel">
-                <h2>Join the Mood Team</h2>
-                <p>
-                    We are a small but passionate team dedicated to creating memorable experiences for every guest who walks through our doors.
-                </p>
+<div class="section-panel jobs-panel">
+                <div class="menu-hero">
+                    <div class="menu-hero-copy">
+                        <p class="menu-eyebrow">We're hiring</p>
+                        <h2>Join the Mood Team</h2>
+                        <p class="menu-intro">
+                            We are a small but passionate team dedicated to creating memorable experiences for every guest who walks through our doors.
+                        </p>
+                        <div class="menu-tags" aria-label="Jobs and workplace highlights">
+                            <span>Mood Team</span>
+                            <span>Counter</span>
+                        </div>
+                    </div>
 
-                <div class="menu-tags" aria-label="Jobs and workplace highlights">
-                    <span>Mood Team</span>
-                    <span>Counter</span>
+                    <div class="menu-highlight-card" aria-label="Careers highlights">
+                        <p class="menu-highlight-label">Open Roles</p>
+                        <ul class="menu-highlight-list">
+                            <li>Barista/Staff</li>
+                            <li>Bartenders</li>
+                            <li>Service Crew</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="menu-gallery music-gallery" aria-label="Jobs and workplace gallery">
+                <div class="menu-gallery" aria-label="Jobs and workplace gallery">
                     <figure class="menu-gallery-card">
                         <img src="mood team.jpg" alt="Mood Cafe team members together">
                         <figcaption>
@@ -386,7 +412,7 @@
             document.getElementById(id).style.display = 'grid';
 
             if (id !== 'home') {
-                document.getElementById(id).style.display = 'block';
+                document.getElementById(id).style.display = 'flex';
                 body.classList.add('section-view');
             } else {
                 body.classList.remove('section-view');
