@@ -1,7 +1,7 @@
 <!--
     FILE: index.html
-    PROJECT: Mood Cafe and Lounge Bar - Homepage Replica
-    AUTHOR: Hand-coded and adapted to match the provided reference
+    PROJECT: Mood Cafe and Lounge Bar
+    AUTHOR: Coded and designed by Cielle Mae Peñamora
     DATE: 2026
 -->
 <!DOCTYPE html>
@@ -23,10 +23,10 @@
 
             <nav class="main-nav" aria-label="Primary">
                 <div class="nav-links">
-                    <a class="nav-link active" href="#" onclick="showSection('home'); return false;">Home</a>
-                    <a class="nav-link" href="#" onclick="showSection('menu'); return false;">Menu</a>
-                    <a class="nav-link" href="#" onclick="showSection('music'); return false;">Music</a>
-                    <a class="nav-link" href="#" onclick="showSection('jobs'); return false;">Jobs</a>
+                    <a class="nav-link active" href="#" data-section="home">Home</a>
+                    <a class="nav-link" href="#" data-section="menu">Menu</a>
+                    <a class="nav-link" href="#" data-section="music">Music</a>
+                    <a class="nav-link" href="#" data-section="jobs">Jobs</a>
                 </div>
                 <a class="reserve-btn" href="#">Reserve a Table</a>
             </nav>
@@ -72,8 +72,8 @@
 
                         <section>
                             <h2>Connect</h2>
-                            <p><a href="https://www.facebook.com/profile.php?id=61575905944306" target="_blank" rel="noreferrer">Facebook <span aria-hidden="true">f</span></a></p>
-                            <p><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram <span aria-hidden="true">&#9673;</span></a></p>
+                            <p><a href="https://www.facebook.com/profile.php?id=61575905944306" target="_blank" rel="noreferrer">Facebook</a></p>
+                            <p><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a></p>
                         </section>
                     </div>
                 </div>
@@ -395,36 +395,7 @@
     </div>
 
     <!-- JavaScript for Navigation -->
-    <script>
-        function showSection(id) {
-            var sections = document.querySelectorAll('.page-section');
-            var links = document.querySelectorAll('.nav-link');
-            var body = document.body;
-
-            for (var i = 0; i < sections.length; i++) {
-                sections[i].style.display = 'none';
-            }
-
-            for (var j = 0; j < links.length; j++) {
-                links[j].className = links[j].className.replace(' active', '');
-            }
-
-            document.getElementById(id).style.display = 'grid';
-
-            if (id !== 'home') {
-                document.getElementById(id).style.display = 'flex';
-                body.classList.add('section-view');
-            } else {
-                body.classList.remove('section-view');
-            }
-
-            for (var k = 0; k < links.length; k++) {
-                if (links[k].getAttribute('onclick').indexOf("'" + id + "'") !== -1) {
-                    links[k].className += ' active';
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 
 </body>
 </html>
