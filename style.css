@@ -1,20 +1,39 @@
 /*
     FILE: style.css
-    PROJECT: Mood Cafe and Lounge Bar - Homepage Replica Stylesheet
-    AUTHOR: Hand-coded and adapted from the provided homepage reference
+    PROJECT: Mood Cafe and Lounge Bar
+    AUTHOR: Coded and designed by Cielle Mae Peñamora
     DATE: 2026
 */
 
-/* 1. Color Variables */
+/* 1. Color and Layout Variables */
 :root {
-    --bg: #f5f1eb;
-    --ink: #241613;
-    --soft-ink: #5b473d;
-    --accent: #be8a5f;
-    --accent-deep: #7d5437;
-    --shadow: 0 18px 32px rgba(29, 17, 12, 0.22);
+    /* Brand Colors */
+    --clr-bg: #f5f1eb;
+    --clr-bg-alt: #efe9e2;
+    --clr-ink: #241613;
+    --clr-ink-soft: #5b473d;
+    --clr-accent: #be8a5f;
+    --clr-accent-deep: #7d5437;
+    --clr-accent-light: #c89468;
+    --clr-accent-gold: #d1b170;
+    --clr-white: #ffffff;
+    --clr-nav-bg: linear-gradient(180deg, #593528 0%, #4b2a1f 100%);
+    
+    /* Spacing & Layout */
     --header-height: 86px;
     --footer-height: 48px;
+    --section-padding: 1.5rem;
+    --border-radius-lg: 22px;
+    --border-radius-md: 16px;
+    --border-radius-sm: 8px;
+    
+    /* Effects */
+    --shadow-main: 0 18px 32px rgba(29, 17, 12, 0.22);
+    --shadow-card: 0 12px 24px rgba(46, 29, 20, 0.26);
+    --shadow-text: 0 1px 2px rgba(10, 7, 5, 0.35);
+    --transition-fast: 160ms ease;
+    
+    /* Computed */
     --viewport-section-height: calc(100vh - var(--footer-height));
 }
 
@@ -28,9 +47,9 @@
 /* 3. Base Page Styles */
 body {
     height: auto;
-    background: #efe9e2;
-    color: var(--ink);
-    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    background: var(--clr-bg-alt);
+    color: var(--clr-ink);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
     overflow: auto;
 }
 
@@ -38,6 +57,7 @@ body {
 a {
     color: inherit;
     text-decoration: none;
+    transition: var(--transition-fast);
 }
 
 /* Images */
@@ -63,7 +83,7 @@ img {
     gap: 28px;
     min-height: 79px;
     padding: 14px 22px 15px 34px;
-    background: linear-gradient(180deg, #593528 0%, #4b2a1f 100%);
+    background: var(--clr-nav-bg);
     color: #f6efe8;
     position: absolute;
     top: 0;
@@ -136,13 +156,13 @@ img {
 }
 
 .main-nav a.active {
-    color: #c89468;
+    color: var(--clr-accent-light);
 }
 
 /* Reserve Button */
 .reserve-btn {
     border: 2px solid rgba(177, 123, 81, 0.82);
-    border-radius: 8px;
+    border-radius: var(--border-radius-sm);
     padding: 12px 21px !important;
     text-transform: uppercase;
     letter-spacing: 0.02em;
@@ -271,8 +291,6 @@ img {
     line-height: 1.22;
 }
 
-
-
 /* Bottom Contact Strip */
 .contact-strip {
     margin-top: auto;
@@ -364,15 +382,10 @@ img {
 .feature-cards {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px;
-    width: calc(100% + 160px);
-    max-width: 920px;
+    gap: 1.5rem;
+    width: 100%;
     margin-top: auto;
-    margin-left: -150px;
-    margin-right: 0;
-    padding: 0 0 28px;
-    transform: translateY(18px);
-    position: relative;
+    padding: 2rem 0;
     z-index: 3;
 }
 
@@ -380,10 +393,10 @@ img {
     position: relative;
     aspect-ratio: 0.58;
     min-height: 242px;
-    border-radius: 20px;
+    border-radius: var(--border-radius-md);
     overflow: hidden;
     border: 3px solid rgba(220, 220, 220, 0.95);
-    box-shadow: 0 12px 24px rgba(46, 29, 20, 0.26);
+    box-shadow: var(--shadow-card);
     background: #cbb5a1;
 }
 
@@ -435,7 +448,7 @@ img {
     display: none;
     flex: 1;
     height: 100%;
-    padding: calc(var(--header-height) + 18px) 28px 16px;
+    padding: calc(var(--header-height) + var(--section-padding)) var(--section-padding) 1rem;
     background:
         linear-gradient(180deg, rgba(31, 20, 15, 0.48), rgba(31, 20, 15, 0.48)),
         url("widebackground.png") center center / cover no-repeat;
@@ -450,9 +463,9 @@ img {
     margin: 0 auto;
     background: linear-gradient(180deg, rgba(255, 249, 242, 0.98), rgba(248, 240, 231, 0.98));
     border: 1px solid rgba(118, 91, 72, 0.18);
-    border-radius: 22px;
-    padding: 20px 24px;
-    box-shadow: 0 18px 40px rgba(43, 24, 17, 0.1);
+    border-radius: var(--border-radius-lg);
+    padding: var(--section-padding);
+    box-shadow: var(--shadow-main);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -628,10 +641,10 @@ img {
 .menu-gallery-card {
     background: linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(247, 238, 229, 0.94));
     border: 1px solid rgba(125, 84, 55, 0.12);
-    border-radius: 20px;
+    border-radius: var(--border-radius-md);
     padding: 10px;
     box-shadow: 0 14px 24px rgba(43, 24, 17, 0.08);
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
     height: fit-content;
 }
 
@@ -799,7 +812,6 @@ img {
         padding-bottom: 48px;
     }
 }
-
 
 .jobs-panel {
     justify-content: flex-start !important;
